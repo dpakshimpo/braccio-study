@@ -1,0 +1,17 @@
+<launch>
+
+
+  <!-- Launch Gazebo  -->
+  <include file="$(find moveit_braccio)/launch/gazebo/braccio_world_grasping.launch" />   
+
+  <!-- ros_control seven dof arm launch file -->
+  <include file="$(find moveit_braccio)/launch/gazebo/braccio_gazebo_states.launch" />   
+
+  <!-- ros_control position control dof arm launch file -->
+  <!--<include file="$(find moveit_braccio)/launch/gazebo/braccio_gazebo_position.launch" />  -->
+
+  <!-- ros_control trajectory control dof arm launch file -->
+  <include file="$(find moveit_braccio)/launch/gazebo/braccio_trajectory_controller.launch" />    
+
+
+</launch>

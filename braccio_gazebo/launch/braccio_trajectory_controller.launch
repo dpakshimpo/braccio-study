@@ -1,0 +1,7 @@
+<launch>
+	<rosparam file="$(find moveit_braccio)/config/trajectory_control.yaml" command="load"/>
+
+  <node name="moveit_braccio_controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+    output="screen" ns="/braccio" args="braccio_arm_joint_controller 						      gripper_controller"/>
+
+</launch>
